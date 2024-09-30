@@ -1,6 +1,6 @@
 import "./Home.css";
 import { cleanPage } from "../../utils/cleanPage";
-import { experienceNav, experienceContent } from "../../components/Experience/Experience";
+import { experienceTabs, experienceNav, experienceContent } from "../../components/Experience/Experience";
 
 const main = document.querySelector("main");
 cleanPage(main);
@@ -18,9 +18,11 @@ const mainSection = () => {
 
 const experiencesSection = () => {
   const experiencesSection = document.createElement('section');
-  experiencesSection.classList.add('experience');
+  experiencesSection.classList.add('experiences-container');
   experiencesSection.innerHTML = experienceNav() + experienceContent();
   main.appendChild(experiencesSection);
+  //se ejecutan las pestañas
+  experienceTabs();
 };
 
 export {mainSection, experiencesSection};
