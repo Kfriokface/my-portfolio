@@ -2,11 +2,11 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 8rem;
-
+  padding: 2rem;
   gap: 4rem;
   flex-wrap: wrap;
-  margin: 2rem 0;
+  z-index: 9;
+  border-top: 1px solid var(--line);
 }
 
 @media (max-width: 770px) {

@@ -18,7 +18,7 @@ const mainSection = () => {
 
 const experiencesSection = () => {
   const experiencesSection = document.createElement('section');
-  experiencesSection.classList.add('experiences-container');
+  experiencesSection.classList.add('experience');
   experiencesSection.innerHTML = experienceNav() + experienceContent();
   main.appendChild(experiencesSection);
   //se ejecutan las pestañas
