@@ -9,11 +9,13 @@ export const changeTheme = () => {
 };
 
 export const changeText = () => {
-  const themeBtn = document.querySelector("#themeBtn");
-  if (themeBtn.innerText === "☀") {
-    themeBtn.innerText = "☾";
+  const themeBtn = document.querySelector("#themeBtn > i");
+  if (themeBtn.classList.contains('fa-moon')) {
+    themeBtn.classList.remove('fa-moon');
+    themeBtn.classList.add('fa-sun');
   } else {
-    themeBtn.innerText = "☀";
+    themeBtn.classList.remove('fa-sun');
+    themeBtn.classList.add('fa-moon');
   }
 };
 
@@ -28,7 +30,7 @@ export const Navbar = () => `
         <a href="#" id="projectslink">Projects</a>
     </li>
     <li>
-        <button id="themeBtn">☀</button>
+        <button id="themeBtn"><i class="fa-solid fa-moon"></i></button>
     </li>
 </ul>
 </nav>

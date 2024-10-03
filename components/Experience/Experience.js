@@ -1,6 +1,12 @@
 import "./Experience.css";
 import { experiences } from "../../data/experiences";
 
+const experienceHeader = () => {
+  const header = document.createElement('h2');
+  header.innerText = 'Experiencia laboral';
+  return header.outerHTML;
+};
+
 const experienceTabs = () => {
   let groups = document.querySelectorAll('.experience');
   if (groups.length > 0) {
@@ -69,4 +75,4 @@ const experienceContent = () => {
   return contentWrapper.outerHTML;
 };
 
-export {experienceTabs, experienceNav, experienceContent};
+export { experienceHeader, experienceTabs, experienceNav, experienceContent};

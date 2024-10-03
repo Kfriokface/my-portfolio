@@ -1,39 +1,46 @@
 .experience {
   margin: 2rem 0;
-  font-size: 0.8rem;
+  font-size: 1rem;
   gap: 0;
+}
+.experience h2 {
+  margin-bottom: 1.5rem;
+  font-weight: 300;
 }
 .e-tabs {
   display: flex;
   gap: 10px;
+  margin-bottom: -1px;
+  z-index: 9;
 }
 .e-tab {
-  color: #dedede;
-  padding: 0.5rem;
+  color: #333;
+  padding: 1rem 1.5rem;
   cursor: pointer;
-  text-align: center;
-  border: 1px solid var(--line);
-  border-bottom: none;
+  text-align: left;
   border-radius: 5px 5px 0 0;
+  background-color: #696969;
+  border: 1px solid #696969;
+  border-bottom: 1px solid var(--line);
 }
 .e-tabs li:hover {
-  background-color: #545454;
+  background-color: #333;
   color: #d2d2d2;
 }
 .e-tabs li.selected {
-  color: #458ace;
+  color: #d35e90;
   cursor: default;
-  background: #333;
+  background-color: #111111;
+  border: 1px solid var(--line);
+  border-bottom: none;
 }
 .e-contents {
   width: 100%;
   border: 1px solid var(--line);
-  border-top: none;
 }
 .e-content {
   display: none;
-  padding: 1em;
-  background-color: #333;
+  padding: 1.5em;
   width: 100%;
   color: #b7b7b7;
   line-height: 1.3em;
@@ -45,9 +52,13 @@
 .e-content div {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
+  color: white;
 }
-
+.e-content div h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
 .e-content div span {
   font-style: italic;
 }
