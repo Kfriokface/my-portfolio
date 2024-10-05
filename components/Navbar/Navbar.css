@@ -1,34 +1,37 @@
-nav {
-  height: 10vh;
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 5rem;
+  padding: 0 2rem;
   flex-wrap: wrap;
 }
 
-@media (max-width: 770px) {
-  nav {
-    padding: 0 2rem;
-  }
+.navbar__logo > img {
+  filter: invert();
 }
 
-nav > ul {
+.navbar > ul {
   display: flex;
   gap: 3rem;
 }
 
-nav button {
+.navbar button {
   background: none;
   border: none;
   color: inherit;
   transform: scale(1.5);
 }
 
-nav a {
+.navbar a {
   transition: all 0.3s ease-in-out;
 }
 
-nav a:hover {
+.navbar a:hover {
   color: var(--highlight);
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    padding: 0 5rem;
+  }
 }

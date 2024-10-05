@@ -19,6 +19,7 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  line-height: 21px;
   height: 100vh;
 }
 
@@ -26,6 +27,9 @@ li {
   list-style-type: none;
 }
 
+p {
+  color: #b7b7b7;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -39,6 +43,13 @@ body {
   background-color: var(--bg-dark);
   color: var(--primary-dark);
   transition: all 0.5s ease-in-out;
+}
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 0;
 }
 
 .light {
@@ -58,6 +69,6 @@ section {
 
 @media (min-width: 768px) {
   section {
-    padding: 0 5rem;
+    max-width: 1200px;
   }
 }

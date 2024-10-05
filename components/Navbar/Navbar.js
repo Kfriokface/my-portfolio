@@ -20,8 +20,8 @@ export const changeText = () => {
 };
 
 export const Navbar = () => `
-<nav>
-<h2>Alberto Sancho</h2>
+<nav class="navbar">
+  <figure class="navbar__logo"><img src="../../public/images/logo_AS.svg" alt="Logotipo de Alberto Sancho" width="200" height="67"></figure>
 <ul>
     <li>
         <a href="#" id="homelink">Home</a>

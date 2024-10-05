@@ -15,6 +15,5 @@ linkPage("#homelink", mainSection);
 linkPage("#projectslink", Projects);
 
 mainSection();
-experiencesSection();
 
 changeTheme();

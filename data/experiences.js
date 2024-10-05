@@ -1,24 +1,24 @@
 export const experiences = [
   {
-    button: "Full Stack Developer",
+    tab: "Full Stack Developer",
     title: "Webconsultas.com",
     description: "Webconsultas es una revista de contenido digital realizada en Drupal. Realizo labores de desarrollo tanto en en backend como en el frontend, usando PHP, Javascript, CSS3 y HTML",
     years: 'Junio 2013 - actualidad',
   },
   {
-    button: "Consultoría gráfica para empresas",
+    tab: "Consultor gráfico",
     title: "Freelance",
     description: "Asesoramiento y gestión del material gráfico y publicitario para empresas",
     years: 'Marzo 2011 - Junio 2013',
   },
   {
-    button: "Director de Arte",
+    tab: "Director de Arte",
     title: "Artestudios Agencia de Servicios Plenos",
     description: "Creación y producción de material gráfico publicitario",
     years: 'Octubre 2005 - Marzo 2011',
   },
   {
-    button: "Técnico de preimpresión",
+    tab: "Técnico de preimpresión",
     title: "Diflex, S.L.",
     description: "Realización de artes finales para la impresión mediante flexografía",
     years: 'Abril 1993 - Octubre 2005',
