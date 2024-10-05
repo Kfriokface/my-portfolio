@@ -1,6 +1,7 @@
 import "./Home.css";
 import { cleanPage } from "../../utils/cleanPage";
 import { experienceHeader, experienceTabs, experienceNav, experienceContent } from "../../components/Experience/Experience";
+import photoAs from "../../public/images/alberto_sancho.jpg"
 
 const main = document.querySelector("main");
 cleanPage(main);
@@ -10,7 +11,7 @@ const mainSection = () => {
     <section class="about-me">
       <div class="about-me__wrapper">
         <figure>
-          <img src="../../public/images/alberto_sancho.jpg" alt="Alberto Sancho" width="564" height="720">
+          <img src="${photoAs}" alt="Alberto Sancho" width="564" height="720">
         </figure>
         <div class="about-me__text"> 
           <span>Hola, soy</span>

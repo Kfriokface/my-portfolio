@@ -1,4 +1,5 @@
 import "./Navbar.css";
+import logoAs from "../../public/images/logo_AS.svg"
 
 export const changeTheme = () => {
   const themeBtn = document.querySelector("#themeBtn");
@@ -21,7 +22,7 @@ export const changeText = () => {
 
 export const Navbar = () => `
 <nav class="navbar">
-  <figure class="navbar__logo"><img src="../../public/images/logo_AS.svg" alt="Logotipo de Alberto Sancho" width="200" height="67"></figure>
+  <figure class="navbar__logo"><img src="${logoAs}" alt="Logotipo de Alberto Sancho" width="200" height="67"></figure>
 <ul>
     <li>
         <a href="#" id="homelink">Home</a>
