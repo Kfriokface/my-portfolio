@@ -1,0 +1,55 @@
+.navbar--lateral {
+  position: fixed;
+  top: 0;
+  left: -20rem;
+  padding: 1.5rem;
+  z-index: 9999;
+  background: var(--bg-light);
+  height: 100vh;
+  width: 90%;
+  max-width: 300px;
+  transition: left .25s ease-in;
+}
+
+.navbar--lateral__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.navbar--lateral__wrapper .navbar__logo {
+  margin: 2em 0;
+}
+
+.navbar--lateral #closeMenuLateral {
+  text-align: right;
+  color: var(--bg-dark)
+}
+
+.navbar--lateral ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  color: var(--bg-dark);
+  font-size: 120%;
+}
+
+.navbar--lateral button {
+  background: none;
+  border: none;
+  color: inherit;
+  transform: scale(1.5);
+}
+
+.navbar--lateral a {
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar--lateral a:hover {
+  color: var(--highlight);
+}
+
+/* dinamic */
+body.aside-active .navbar--lateral {
+  left: 0;
+}

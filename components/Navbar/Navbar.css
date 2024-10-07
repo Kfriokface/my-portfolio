@@ -1,4 +1,4 @@
-.navbar {
+.navbar--top {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6,32 +6,26 @@
   flex-wrap: wrap;
 }
 
-.navbar__logo > img {
+.navbar--top .navbar__logo > img {
   filter: invert();
 }
 
-.navbar > ul {
+.navbar--top > ul {
   display: flex;
   gap: 3rem;
 }
 
-.navbar button {
+.navbar--top button {
   background: none;
   border: none;
   color: inherit;
   transform: scale(1.5);
 }
 
-.navbar a {
+.navbar--top a {
   transition: all 0.3s ease-in-out;
 }
 
-.navbar a:hover {
+.navbar--top a:hover {
   color: var(--highlight);
-}
-
-@media (min-width: 768px) {
-  .navbar {
-    padding: 0 5rem;
-  }
 }
