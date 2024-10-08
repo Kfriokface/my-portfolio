@@ -2,17 +2,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  padding: 2rem;
   flex-wrap: wrap;
 }
 
-.navbar--top .navbar__logo > img {
-  filter: invert();
+.navbar--top .navbar__logo {
+  max-width: 60px;
 }
 
 .navbar--top > ul {
   display: flex;
+  align-items: center;
   gap: 3rem;
+  font-size: 120%;
 }
 
 .navbar--top button {
@@ -29,3 +31,31 @@
 .navbar--top a:hover {
   color: var(--highlight);
 }
+
+.navbar--top li {
+  display: none;
+}
+
+.navbar--top li#burger,
+.navbar--top li#themeBtn {
+  display: block;
+}
+
+@media screen and (min-width: 576px) {
+  .navbar--top .navbar__logo {
+    max-width: 100%;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .navbar--top li {
+    display: block;
+  }
+  
+  .navbar--top li#burger {
+    display: none;
+  }
+}
+
+

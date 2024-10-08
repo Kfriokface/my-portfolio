@@ -1,10 +1,12 @@
 import "./style.css";
 import { changeTheme } from "./components/Navbar/Navbar";
 import { linkPage } from "./utils/linkPage";
-import { Navbar, NavbarLateral, showMenuLateral } from "./components/Navbar/Navbar";
+import { Navbar, NavbarLateral, showMenuLateral, overflow } from "./components/Navbar/Navbar";
 import { Footer } from "./components/Footer/Footer";
 import { mainSection } from "./pages/Home/Home";
 import { Projects } from "./pages/Projects/Projects";
+
+overflow(); 
 
 const header = document.querySelector("header");
 header.innerHTML = Navbar() + NavbarLateral();
@@ -19,4 +21,3 @@ mainSection();
 
 changeTheme();
 showMenuLateral();
-

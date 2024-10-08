@@ -21,6 +21,10 @@
   margin: 2em 0;
 }
 
+.navbar--lateral__wrapper .navbar__logo > img {
+  filter: invert();
+}
+
 .navbar--lateral #closeMenuLateral {
   text-align: right;
   color: var(--bg-dark)
@@ -50,6 +54,19 @@
 }
 
 /* dinamic */
+body.aside-active {
+  overflow-y: hidden;
+}
 body.aside-active .navbar--lateral {
   left: 0;
+}
+body.aside-active .navbar__overflow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110vh;
+  background-color: black;
+  opacity: .8;
+  z-index: 999;
 }
