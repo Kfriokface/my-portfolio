@@ -2,6 +2,8 @@ import "./Home.css";
 import { cleanPage } from "../../utils/cleanPage";
 import { experienceHeader, experienceTabs, experienceNav, experienceContent } from "../../components/Experience/Experience";
 import photoAs from "../../public/images/alberto_sancho.jpg"
+import { Skills } from "../../components/Skills/Skills";
+import Glide from '@glidejs/glide';
 
 const main = document.querySelector("main");
 cleanPage(main);
@@ -23,6 +25,7 @@ const mainSection = () => {
         </div>
       </div>
     </section>`;
+    skillsSection();
     experiencesSection();
 };
 
@@ -33,6 +36,19 @@ const experiencesSection = () => {
   main.appendChild(experiencesSection);
   //se ejecutan las pestañas
   experienceTabs();
+};
+
+const skillsSection = () => {
+  const skillSection = document.createElement('section');
+  skillSection.classList.add('skills');
+  skillSection.innerHTML = Skills();
+  main.appendChild(skillSection);
+  let glide = new Glide('.glide', {
+    type: 'carousel',
+    startAt: 0,
+    perView: 3
+  })
+  glide.mount();
 };
 
 export {mainSection, experiencesSection};
