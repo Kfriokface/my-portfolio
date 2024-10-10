@@ -47,8 +47,8 @@ const skillsSection = () => {
     type: 'carousel',
     perView: 5,
     startAt: 0,
-    gap: 20,
-    autoplay: 3000,
+    gap: 40,
+    autoplay: 5000,
     hoverpause: true,
     animationTimingFunc: 'ease-in-out',
     animationDuration: 800,
@@ -59,8 +59,11 @@ const skillsSection = () => {
       768: {
         perView: 3
       },
-      552: {
+      576: {
         perView: 2
+      },
+      414: {
+        perView: 1
       }
     }
   })

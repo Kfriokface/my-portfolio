@@ -7,6 +7,22 @@
   width: calc(100% - 4rem);
   margin: auto;
 }
+
+.glide__slide .skill .content .percent {
+  width: 130px;
+  height: 130px;
+}
+
+.glide__slide .skill .content .percent svg {
+  width: 130px;
+  height: 130px;
+}
+
+.glide__slide .skill .content .percent svg circle:nth-child(2) {
+  stroke-dasharray: 380;
+  stroke-dashoffset: calc(380 - (380* var(--num)) / 100);
+}
+
 .glide__bullets {
   bottom: -2em;
 }

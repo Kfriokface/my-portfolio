@@ -1,21 +1,15 @@
 footer {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 2rem;
-  gap: 4rem;
+  gap: 2rem;
   flex-wrap: wrap;
   z-index: 9;
   border-top: 1px solid var(--line);
   margin-top: 8rem;
-}
-
-@media (max-width: 770px) {
-  footer {
-    padding: 0 2rem;
-    gap: 2rem;
-  }
+  color: var(--base);
 }
 
 footer > div {
@@ -24,9 +18,23 @@ footer > div {
   flex-wrap: wrap;
 }
 
-@media screen and (min-width: 1200px) and (min-height: 1080px) {
-  footer {
-    position: fixed;
-    bottom: 0;
+footer .contact {
+  color: var(--base);
+  justify-content: flex-start ;
+  gap: 5px;
+  align-items: center;
+}
+
+footer .copyright {
+  flex-basis: 100%;
+  order: -1;
+  color: var(--fondo);
+  text-align: center;
+}
+
+@media screen and (min-width:1200px) {
+  footer .copyright {
+    flex-basis: initial;
+    order: initial;
   }
 }

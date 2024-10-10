@@ -19,8 +19,8 @@ const skillsSlides = () => {
             <i class="fa-brands fa-${skill.icon}"></i>
             <div class="dot"></div>
             <svg>
-              <circle cx="70" cy="70" r="70"></circle>
-              <circle cx="70" cy="70" r="70"></circle>
+              <circle cx="60" cy="60" r="60"></circle>
+              <circle cx="60" cy="60" r="60"></circle>
             </svg>
           </div>
           <div class="number">
