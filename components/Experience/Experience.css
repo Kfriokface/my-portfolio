@@ -5,7 +5,7 @@
 }
 
 .experience h2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
   font-weight: 300;
 }
 
@@ -19,13 +19,13 @@
 .experience__tab {
   display: flex;
   align-items: center;
-  color: #333;
+  color: var(--bg-dark);
   padding: 1rem 1.5rem;
   cursor: pointer;
   text-align: left;
   border-radius: 5px 5px 0 0;
-  background-color: #696969;
-  border: 1px solid #696969;
+  background-color: var(--fondo);
+  border: 1px solid var(--fondo);;
   border-bottom: 1px solid var(--line);
   transition: background 0.4s ease-in-out, height 0.2s linear;
 }
@@ -36,7 +36,7 @@
 }
 
 .experience__tab.selected {
-  color: #3eb8f2;
+  color: var(--cyan);
   cursor: default;
   background-color: #111111;
   border: 1px solid var(--line);

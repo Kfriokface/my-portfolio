@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
-
 :root {
   --primary-dark: whitesmoke;
   --bg-dark: #111111;
   --primary-light: #111111;
   --bg-light: whitesmoke;
   --highlight: #6cace4;
+  --fondo: #696060;
+  --base: #b6aeae; 
+  --cyan: #3eb8f2;
   --line: rgba(245, 245, 245, 0.7);
   --divider: rgb(164, 164, 164);
 }
@@ -29,7 +30,7 @@ li {
 }
 
 p {
-  color: #b7b7b7;
+  color: var(--base);
 }
 a {
   text-decoration: none;

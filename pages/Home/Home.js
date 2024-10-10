@@ -45,8 +45,24 @@ const skillsSection = () => {
   main.appendChild(skillSection);
   let glide = new Glide('.glide', {
     type: 'carousel',
+    perView: 5,
     startAt: 0,
-    perView: 3
+    gap: 20,
+    autoplay: 3000,
+    hoverpause: true,
+    animationTimingFunc: 'ease-in-out',
+    animationDuration: 800,
+    breakpoints: {
+      1024: {
+        perView: 4
+      },
+      768: {
+        perView: 3
+      },
+      552: {
+        perView: 2
+      }
+    }
   })
   glide.mount();
 };

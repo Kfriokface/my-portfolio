@@ -1,2 +1,177 @@
 @import "../../node_modules/@glidejs/glide/dist/css/glide.core.min.css";
 @import "../../node_modules/@glidejs/glide/dist/css/glide.theme.min.css";
+
+/* Glide */
+
+.glide {
+  width: calc(100% - 4rem);
+  margin: auto;
+}
+.glide__bullets {
+  bottom: -2em;
+}
+
+.glide__arrow {
+  position: absolute;
+  display: block;
+  top: 50%;
+  z-index: 2;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 9px 12px;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  box-shadow: none;
+  text-shadow: none;
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 150ms ease,border 300ms ease-in-out;
+  transform: translateY(-50%);
+  line-height: 1;
+}
+
+.slider__arrow--prev {
+  left: -2rem;
+}
+
+.slider__arrow--next {
+  right: -2rem;
+}
+
+/* Skills */
+
+.skills {
+  margin: 3rem auto 8rem;
+}
+
+.skills > h2 {
+  color: var(--base);
+  margin-bottom: 0;
+  font-weight: 300;
+  border-bottom: 1px solid var(--fondo);
+  width: 100%;
+  padding-bottom: .5rem;
+}
+
+.skill {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill .content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill i.fa-brands {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 350%;
+  color: var(--bg-dark);
+}
+
+.skill .content .percent {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+.skill .content .percent::before {
+  content: '';
+  position: absolute;
+  inset: 20px;
+  background: var(--fondo);
+  border-radius: 50%;
+}
+
+.skill .content .percent svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(270deg);
+}
+
+.skill .content .percent svg circle {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke-width: 5;
+  stroke: var(--fondo);
+  transform: translate(5px, 5px);
+}
+
+.skill .content .percent svg circle:nth-child(2) {
+  stroke: var(--base);
+  stroke-dasharray: 440;
+  stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
+  opacity: 0;
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 2.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.skill .content .percent .dot {
+  position: absolute;
+  inset: 5px;
+  z-index: 10;
+  animation: animateDot 2s linear forwards;
+}
+
+@keyframes animateDot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(calc(3.6deg * var(--num)));
+  }
+}
+
+.skill .content .percent .dot::before {
+  content: '';
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  background: var(--base);;
+  border-radius: 50%;
+}
+
+.skill .content .number {
+  position: relative;
+  inset: 0;
+  opacity: 0;
+  animation: fadeIn 1s linear forwards;
+  animation-delay: 2.5s;
+  margin-top: 1em;
+}
+
+.skill .content .number h2 {
+  font-size: 2.5rem;
+  color: var(--fondo);
+}
+
+.skill .content .number h2 span {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
