@@ -58,4 +58,8 @@
   }
 }
 
+/* Light */
 
+.light .navbar--top .navbar__logo img {
+  filter: invert(.9);
+}

@@ -38,3 +38,8 @@ footer .copyright {
     order: initial;
   }
 }
+
+
+.light footer {
+  background-color: var(--primary-light);
+}

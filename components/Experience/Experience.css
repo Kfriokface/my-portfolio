@@ -54,6 +54,7 @@
 .experience__contents {
   width: 100%;
   border: 1px solid var(--line);
+  border-radius: 0 5px 5px 5px;
 }
 
 .experience__content {
@@ -230,4 +231,26 @@
     top: 0px;
     opacity: 1;
   }
+}
+
+.light .experience__contents {
+  border-color: var(--base);
+}
+
+.light .experience__tab {
+  border-color: var(--base);
+  background-color: var(--base);
+}
+
+.light .experience__tab.selected {
+  color: var(--cyan);
+  cursor: default;
+  background-color: var(--bg-light);
+  border: 1px solid var(--base);
+  border-bottom: none;
+}
+
+.light .experience__content div h4,
+.light .experience__content div span {
+  color: var(--primary-light);
 }

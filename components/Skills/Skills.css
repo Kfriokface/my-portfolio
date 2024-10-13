@@ -191,3 +191,26 @@
   font-weight: 300;
   font-size: 1.5rem;
 }
+
+/* light */
+
+.light .skill i.fa-brands {
+  color: var(--bg-light);
+}
+
+.light .glide__bullet {
+  background-color: var(--base);
+}
+
+.light .glide__bullet--active {
+  background-color: var(--fondo);
+}
+
+.light .glide__bullet:hover,
+.glide__bullet:focus {
+  border-color: var(--fondo);
+}
+
+.light .slider__arrow i {
+  color: var(--base);
+}
