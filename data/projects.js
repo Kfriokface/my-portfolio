@@ -1,47 +1,91 @@
 export const projects = [
   {
-    title: "Primer proyecto",
-    description: "Esta es la descripción de mi primer proyecto",
+    title: "Webconsultas.com",
+    description: "Revista digital de salud y bienestar",
     image:
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2VifGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    tech: ["React", "HTML5", "CSS3", "JavaScript"],
-    github: "http://github.com/myuser/proyecto1",
-    link: "www.proyecto1.com",
+      "../public/images/webs/webconsultas.png",
+    tech: ["Drupal"],
+    github: "",
+    link: "https://www.webconsultas.com",
   },
   {
-    title: "Segundo proyecto",
-    description: "Esta es la descripción de mi segundo proyecto",
+    title: "Natalben.com",
+    description: "Web para el producto farmacéutico Natalben",
     image:
-      "https://images.unsplash.com/photo-1661961111184-11317b40adb2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2344&q=80",
-    tech: ["React", "HTML5", "CSS3", "JavaScript"],
-    github: "http://github.com/myuser/proyecto2",
-    link: "www.proyecto1.com",
+      "../public/images/webs/natalben.png",
+    tech: ["Drupal"],
+    github: "",
+    link: "https://www.natalben.com",
   },
   {
-    title: "Tercer proyecto",
-    description: "Esta es la descripción de mi tercer proyecto",
+    title: "Oniria",
+    description: "Web para el producto farmacéutico Oniria",
     image:
-      "https://images.unsplash.com/photo-1669570094762-828f3dfaf675?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3270&q=80",
-    tech: ["React", "HTML5", "CSS3", "JavaScript"],
-    github: "http://github.com/myuser/proyecto3",
-    link: "www.proyecto1.com",
+      "../public/images/webs/oniria.png",
+    tech: ["Wordpress"],
+    github: "",
+    link: "https://www.oniriabuenasnoches.com/",
   },
   {
-    title: "Cuarto proyecto",
-    description: "Esta es la descripción de mi cuarto proyecto",
+    title: "Zelesse",
+    description: "Web para el producto farmacéutico Zelesse",
     image:
-      "https://images.unsplash.com/photo-1664575198308-3959904fa430?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
-    tech: ["React", "HTML5", "CSS3", "JavaScript"],
+      "../public/images/webs/zelesse.png",
+    tech: ["Wordpress"],
+    github: "",
+    link: "https://www.zelesse.com/",
+  },
+  {
+    title: "Vanesa Fernández",
+    description: "Web para la psicóloga Vanesa Fernández",
+    image:
+      "../public/images/webs/vanesa_fernandez.png",
+    tech: ["Wordpress"],
     github: "http://github.com/myuser/proyecto4",
     link: "www.proyecto1.com",
   },
   {
-    title: "Quinto proyecto",
-    description: "Esta es la descripción de mi quinto proyecto",
+    title: "BodyEvolution",
+    description: "Proyecto para la clínica de fisiorerapia Body Evolution",
     image:
-      "https://images.unsplash.com/photo-1665686306574-1ace09918530?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3387&q=80",
-    tech: ["React", "HTML5", "CSS3", "JavaScript"],
+      "../public/images/webs/body_evolution.png",
+    tech: ["Wordpress"],
     github: "http://github.com/myuser/proyecto5",
-    link: "www.proyecto1.com",
+    link: "https://bepilates.albertosancho.es/",
+  },
+  {
+    title: "AllFresco",
+    description: "Proyecto para una tienda online de vegetales",
+    image:
+      "../public/images/webs/allfresco.png",
+    tech: ["Html5", "CSS3", "JavaScript"],
+    github: "https://github.com/Kfriokface/mod_7_galeria_dinamica",
+    link: "https://allfresco.netlify.app",
+  },
+  {
+    title: "Proyecto E-Commerce",
+    description: "Proyecto para realizar un e-commerce de electrónica",
+    image:
+      "../public/images/webs/myfirstprojectprometeo.png",
+    tech: ["Html5", "CSS3"],
+    github: "https://github.com/Kfriokface/proyecto_1",
+    link: "https://myfirstprojectprometeo.netlify.app",
+  },
+  {
+    title: "Alberto Sancho",
+    description: "Proyecto personal para mostrar una galería de mis trabajos como diseñador gráfico",
+    image:
+      "../public/images/webs/albertosanchoexample.png",
+    tech: ["Html5", "CSS3"],
+    github: "https://github.com/Kfriokface/personal_website",
+    link: "https://albertosanchoexample.netlify.app",
   },
 ];
+
+
+
+
+
+
+
+

@@ -73,12 +73,12 @@ export const NavbarLateral = () => `
     <i id="closeMenuLateral" class="fa-solid fa-times fa-2x" aria-hidden="true"></i>
     <figure class="navbar__logo"><img src="${logoAs}" alt="Logotipo de Alberto Sancho" width="200" height="67"></figure>
     <ul>
-        <li>
-            <a href="#" id="homelink">Inicio</a>
-        </li>
-        <li>
-            <a href="#" id="projectslink">Proyectos</a>
-        </li>
+      <li>
+        <a href="#" id="homelinkLateral">Inicio</a>
+      </li>
+      <li>
+        <a href="#" id="projectslinkLateral">Proyectos</a>
+      </li>
     </ul>
   </div> 
 </nav>

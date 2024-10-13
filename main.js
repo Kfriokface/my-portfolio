@@ -16,6 +16,8 @@ const body = document.querySelector("body");
 
 linkPage("#homelink", mainSection);
 linkPage("#projectslink", Projects);
+linkPage("#homelinkLateral", mainSection);
+linkPage("#projectslinkLateral", Projects);
 
 mainSection();
 
