@@ -13,6 +13,8 @@
     "vite": "^5.4.1"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.6.2"
+    "@glidejs/glide": "^3.6.2",
+    "@vitejs/plugin-react": "^4.3.2",
+    "postcss": "^8.4.47"
   }
 }
