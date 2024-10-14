@@ -25,18 +25,20 @@ export const changeText = () => {
 export const showMenuLateral = () => {
   const body = document.body;
   const openMenu = document.querySelector("#openMenuLateral");
-  const closeMenu = document.querySelector("#closeMenuLateral");
+  const closeMenuBtn = document.querySelectorAll(".closeMenuLateral");
 
   openMenu.addEventListener('click', (e) => {
     body.classList.add('aside-active');
     console.log(e);
   });
 
-  closeMenu.addEventListener('click', (e) => {
-    if (body.classList.contains('aside-active')) {
-      body.classList.remove('aside-active');
-      console.log(e);
-    }
+  closeMenuBtn.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      if (body.classList.contains('aside-active')) {
+        body.classList.remove('aside-active');
+        console.log(e);
+      }
+    });
   });
   
 };
@@ -70,14 +72,14 @@ export const Navbar = () => {
 export const NavbarLateral = () => `
 <nav class="navbar navbar--lateral">
   <div class="navbar--lateral__wrapper">
-    <i id="closeMenuLateral" class="fa-solid fa-times fa-2x" aria-hidden="true"></i>
+    <i id="closeMenuLateral" class="closeMenuLateral fa-solid fa-times fa-2x" aria-hidden="true"></i>
     <figure class="navbar__logo"><img src="${logoAs}" alt="Logotipo de Alberto Sancho" width="200" height="67"></figure>
     <ul>
       <li>
-        <a href="#" id="homelinkLateral">Inicio</a>
+        <a href="#" id="homelinkLateral" class="closeMenuLateral">Inicio</a>
       </li>
       <li>
-        <a href="#" id="projectslinkLateral">Proyectos</a>
+        <a href="#" id="projectslinkLateral" class="closeMenuLateral">Proyectos</a>
       </li>
     </ul>
   </div> 

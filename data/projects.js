@@ -1,6 +1,6 @@
 export const projects = [
   {
-    title: "Webconsultas.com",
+    title: "Webconsultas",
     description: "Revista digital de salud y bienestar",
     image:
       "/images/webs/webconsultas.png",
@@ -9,13 +9,22 @@ export const projects = [
     link: "https://www.webconsultas.com",
   },
   {
-    title: "Natalben.com",
+    title: "Natalben",
     description: "Web para el producto farmacéutico Natalben",
     image:
       "/images/webs/natalben.png",
     tech: ["Drupal"],
     github: "",
     link: "https://www.natalben.com",
+  },
+  {
+    title: "Prodefen",
+    description: "Web para el producto farmacéutico Prodefen",
+    image:
+      "/images/webs/prodefen.png",
+    tech: ["Drupal"],
+    github: "",
+    link: "https://www.prodefen.com/",
   },
   {
     title: "Oniria",
@@ -41,8 +50,8 @@ export const projects = [
     image:
       "/images/webs/vanesa_fernandez.png",
     tech: ["Wordpress"],
-    github: "http://github.com/myuser/proyecto4",
-    link: "www.proyecto1.com",
+    github: "",
+    link: "https://vanesafernandez.es/",
   },
   {
     title: "BodyEvolution",
@@ -50,7 +59,7 @@ export const projects = [
     image:
       "/images/webs/body_evolution.png",
     tech: ["Wordpress"],
-    github: "http://github.com/myuser/proyecto5",
+    github: "",
     link: "https://bepilates.albertosancho.es/",
   },
   {
