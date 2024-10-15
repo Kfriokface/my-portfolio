@@ -68,5 +68,5 @@
 }
 
 .project-card__detail > .tech {
-  color: var(--highlight);
+  color: var(--cyan);
 }

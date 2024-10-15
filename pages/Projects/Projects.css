@@ -11,6 +11,25 @@
   padding-bottom: .5rem;
 }
 
+.projects .filter {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  font-size: 120%;
+  font-weight: 300;
+  color: var(--base);
+}
+
+.projects .filter select {
+  border: none;
+  padding: 10px;
+  color: var(--base);
+  background: var(--bg-dark);
+  font-size: 90%;
+  border: 1px solid var(--fondo);
+}
+
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

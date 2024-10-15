@@ -29,14 +29,12 @@ export const showMenuLateral = () => {
 
   openMenu.addEventListener('click', (e) => {
     body.classList.add('aside-active');
-    console.log(e);
   });
 
   closeMenuBtn.forEach(btn => {
     btn.addEventListener('click', (e) => {
       if (body.classList.contains('aside-active')) {
         body.classList.remove('aside-active');
-        console.log(e);
       }
     });
   });
