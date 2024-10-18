@@ -8,7 +8,7 @@ import Glide from '@glidejs/glide';
 const main = document.querySelector("main");
 cleanPage(main);
 
-const mainSection = () => {
+const Home = () => {
   main.innerHTML = `
     <section class="about-me">
       <div class="about-me__wrapper">
@@ -70,4 +70,4 @@ const skillsSection = () => {
   glide.mount();
 };
 
-export {mainSection, experiencesSection};
+export {Home, experiencesSection};

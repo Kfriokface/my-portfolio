@@ -3,8 +3,11 @@ import { changeTheme } from "./components/Navbar/Navbar";
 import { linkPage } from "./utils/linkPage";
 import { Navbar, NavbarLateral, showMenuLateral, overflow } from "./components/Navbar/Navbar";
 import { Footer } from "./components/Footer/Footer";
-import { mainSection } from "./pages/Home/Home";
+import { Home } from "./pages/Home/Home";
 import { Projects } from "./pages/Projects/Projects";
+import { Contact } from "./pages/Contact/Contact";
+
+
 
 overflow(); 
 
@@ -14,12 +17,14 @@ const footer = document.querySelector("footer");
 footer.innerHTML = Footer();
 const body = document.querySelector("body");
 
-linkPage("#homelink", mainSection);
+linkPage("#homelink", Home);
 linkPage("#projectslink", Projects);
-linkPage("#homelinkLateral", mainSection);
+linkPage("#contactlink", Contact);
+linkPage("#homelinkLateral", Home);
 linkPage("#projectslinkLateral", Projects);
+linkPage("#contactlinkLateral", Contact);
 
-mainSection();
+Home();
 
 changeTheme();
 showMenuLateral();

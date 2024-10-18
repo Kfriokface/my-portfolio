@@ -57,6 +57,9 @@ export const Navbar = () => {
         <li>
             <a href="#" id="projectslink">Proyectos</a>
         </li>
+        <li>
+            <a href="#" id="contactlink">Contacto</a>
+        </li>
         <li id="themeBtn">
             <button><i class="fa-solid fa-moon ${size}"></i></button>
         </li>
@@ -78,6 +81,9 @@ export const NavbarLateral = () => `
       </li>
       <li>
         <a href="#" id="projectslinkLateral" class="closeMenuLateral">Proyectos</a>
+      </li>
+      <li>
+        <a href="#" id="contactlinkLateral" class="closeMenuLateral">Contacto</a>
       </li>
     </ul>
   </div> 
