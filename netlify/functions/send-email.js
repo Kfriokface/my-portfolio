@@ -9,7 +9,7 @@ export async function handler(event) {
   });
 
   const data = {
-    from: 'Excited User <me@your-domain.com>',
+    from: 'Excited User <contacto@daw.albertosancho.es>',
     to: email,
     subject: 'Hello from Mailgun',
     text: message
