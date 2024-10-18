@@ -10,7 +10,7 @@ export const Contact = () => {
     ${formulario}
   `;
   
-  submit();
+  //submit();
 
 }
 
