@@ -31,10 +31,9 @@ showMenuLateral();
 
 
 
-  document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('#contactForm');
+ 
 
-  form.addEventListener('submit', async (event) => {
+  document.querySelector('#contactForm').addEventListener('submit', async (event) => {
     event.preventDefault();
 
     // Obtener los valores de los campos
@@ -72,6 +71,6 @@ showMenuLateral();
       alert('Error occurred while sending email.');
     }
   });
-  });
+
 
 
