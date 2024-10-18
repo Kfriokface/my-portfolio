@@ -10,7 +10,7 @@ export const Contact = () => {
     ${formulario}
   `;
   
-  //submit();
+  submit();
 
 }
 
@@ -63,10 +63,10 @@ const submit2 = () => {
 
 
 const submit = () => {
-  document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('#contactForm');
+  
+  //const form = document.getElementById('#contactForm');
 
-  form.addEventListener('submit', async (event) => {
+  document.querySelector('#contactForm').addEventListener('submit', async (event) => {
     event.preventDefault();
 
     // Obtener los valores de los campos
@@ -80,7 +80,6 @@ const submit = () => {
       email: email,
       subject: subject,
       message: message,
-
     };
 
     try {
@@ -92,7 +91,6 @@ const submit = () => {
         },
         body: JSON.stringify(payload),
       });
-
       if (response.ok) {
         alert('Email sent successfully!');
         form.reset();
@@ -100,9 +98,8 @@ const submit = () => {
         alert('Failed to send email.');
       }
     } catch (error) {
-      console.error('Error sending email:', error);
+    console.error('Error sending email:', error);
       alert('Error occurred while sending email.');
     }
-  });
   });
 };
