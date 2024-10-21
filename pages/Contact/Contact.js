@@ -32,34 +32,6 @@ const formulario = `
 </section>  
 `;
 
-const submit2 = () => {
-  document.querySelector('#contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    // Obtener los valores de los campos
-    const name = document.querySelector('#name').value;
-    const email = document.querySelector('#email').value;
-    const subject = document.querySelector('#subject').value;
-    const message = document.querySelector('#message').value;
-
-    // Validar campos
-    if (name === '' || email === '' || subject === '' || message === '') {
-        alert('Por favor, completa todos los campos.');
-        return;
-    }
-
-    // Aquí podrías enviar los datos a un servidor usando fetch, por ejemplo
-    console.log('Nombre:', name);
-    console.log('Correo electrónico:', email);
-    console.log('Asunto:', subject);
-    console.log('Mensaje:', message);
-
-    // Limpiar el formulario
-    document.querySelector('#contactForm').reset();
-    alert('Mensaje enviado. ¡Gracias por contactarnos!');
-  });
-};
-
 const submit = () => {
   
   document.querySelector('#contactForm').addEventListener('submit', async (event) => {
@@ -71,7 +43,7 @@ const submit = () => {
     const subject = document.querySelector('#subject').value;
     const message = document.querySelector('#message').value;
 
-    const payload = {
+    const body = {
       name: name,
       email: email,
       subject: subject,
@@ -85,7 +57,7 @@ const submit = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(payload),
+        body: JSON.stringify(body),
       });
       if (response.ok) {
         alert('Email sent successfully!');
