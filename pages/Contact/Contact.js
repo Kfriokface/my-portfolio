@@ -11,26 +11,25 @@ export const Contact = () => {
   `;
   
   submit();
-
 }
 
 const introtext = `
-  <div class="contact__text d-flex">
-    <h3 class="sora-regular fs-xl">¿Quieres <span class="sora-extrabold">trabajar</span> conmigo?, <span class="sora-bold outlined-reverse">¡hablemos!</span>.</h3>
-    <p class="fs-sm sora-light">Si te gusta mi trabajo y quieres contactar conmigo para realizar un proyecto, por favor rellena este formulario y cuéntame, de modo escueto, qué necesitas. Me pondré en contacto contigo lo antes posible. Gracias.</p>
-    <p class="fs-sm sora-bold">design@albertosancho.es</p>
-    <p class="fs-sm sora-bold">+34 000 000 000</p>
-  </div>
+<section class="contact">
+  <div class="contact-text">
+    <h1>¿Quieres trabajar conmigo?, <span>¡hablemos!</span>.</h1>
+    <p>Si te gusta mi trabajo y quieres contactar conmigo para realizar un proyecto, por favor rellena este formulario y cuéntame, de modo escueto, qué necesitas. Me pondré en contacto contigo lo antes posible. Gracias.</p>
+  </div>  
 `;
 
 const formulario = `
-  <form id="contactForm" class="contactForm">
+  <form id="contactForm" class="contact-form">
     <input id="name" type="text" name="nombre" placeholder="Nombre completo">
     <input id="email" type="email" name="correo" placeholder="Correo electrónico">
     <input id="subject" type="text" name="asunto" placeholder="Asunto del mensaje">
     <textarea id="message" rows="4" placeholder="Escribe tu comentario aquí..."></textarea>
     <button type="submit">Enviar</button>
   </form>
+</section>  
 `;
 
 const submit2 = () => {
@@ -61,11 +60,8 @@ const submit2 = () => {
   });
 };
 
-
 const submit = () => {
   
-  //const form = document.getElementById('#contactForm');
-
   document.querySelector('#contactForm').addEventListener('submit', async (event) => {
     event.preventDefault();
 

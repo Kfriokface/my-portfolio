@@ -1,7 +1,7 @@
 import "./Navbar.css";
 import "./NavbarLateral.css";
-import logoAsSMall from "../../public/images/logo_AS__small.svg"
-import logoAs from "../../public/images/logo_AS.svg"
+import logoAsSMall from "/images/logo_AS__small.svg"
+import logoAs from "/images/logo_AS.svg"
 
 export const changeTheme = () => {
   const themeBtn = document.querySelector("#themeBtn button");

@@ -1,0 +1,97 @@
+body.contactPage::after {
+  content: "";
+  display: block;
+  background-image: url(/images/main_lg.png);
+  background-repeat: no-repeat;
+  filter: invert();
+  position: fixed;
+  top: 160px;
+  right: -150px;
+  width: 606px;
+  height: 100%;
+  z-index: -1;
+  opacity: .2;
+}
+
+section.contact {
+  max-width: 90%;
+  margin: 6rem auto;
+}
+
+.contact-text {
+  color: var(--base);
+}
+
+.contact-text h1 {
+  font-size: 300%;
+  line-height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.contact-text h1 span {
+  color: var(--bg-light);
+}
+
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  flex: 100%;
+  padding: 1rem;
+  font-size: 120%;
+  border: 1px solid var(--fondo);
+  background: rgba(256,256,256,.1);
+  color:var(--base);
+  border-radius: 3px;;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color:var(--fondo);
+  font-family: monospace;
+
+}
+
+.contact-form button {
+  padding: 1rem;
+  margin: auto;
+  border: none;
+  font-size: 100%;
+  text-transform: uppercase;
+  border-radius: 3px;
+  background-color: var(--base);
+  transition: all .3s;
+}
+
+.contact-form button:hover {
+  background-color: var(--bg-light);
+}
+
+@media screen and (min-width: 768px) {
+  section.contact {
+    max-width: 80%;
+  }
+  
+  .contact-text h1 {
+    font-size: 400%;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Light */
+
+
+
+body.light.contactPage::after {
+  filter: initial;
+}
+
+.contact-text h1 span {
+  color: var(--fondo);
+}

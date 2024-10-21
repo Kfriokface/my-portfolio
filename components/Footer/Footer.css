@@ -30,6 +30,7 @@ footer .copyright {
   order: -1;
   color: var(--fondo);
   text-align: center;
+  font-size: 80%;
 }
 
 @media screen and (min-width:1200px) {
@@ -38,7 +39,6 @@ footer .copyright {
     order: initial;
   }
 }
-
 
 .light footer {
   background-color: var(--primary-light);
