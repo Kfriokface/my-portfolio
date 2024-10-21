@@ -42,7 +42,7 @@ export const showMenuLateral = () => {
 };
 
 export const Navbar = () => {
-  let size = window.innerWidth < 768 ? 'fa-2x' : 'fa-lg';
+  let size = window.innerWidth < 768 ? 'fa-lg' : 'fa-lg';
   return `<nav class="navbar navbar--top">
     <figure class="navbar__logo">
       <picture>
