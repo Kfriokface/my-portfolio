@@ -52,7 +52,7 @@ const submit = () => {
 
     try {
       // Enviar los datos a la función de Netlify
-      const response = await fetch('/.netlify/functions/send-email.js', {
+      const response = await fetch('/.netlify/functions/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
