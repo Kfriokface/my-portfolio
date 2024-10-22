@@ -4,8 +4,8 @@ export async function handler(event) {
   const { email, message } = JSON.parse(event.body);
 
   const mg = mailgun({
-    apiKey: import.meta.env.VITE_MAILGUN_API_KEY,
-    domain: import.meta.env.VITE_MAILGUN_DOMAIN
+    apiKey: process.env.MAILGUN_API_KEY,
+    domain: process.env.MAILGUN_DOMAIN
   });
 
   const data = {
