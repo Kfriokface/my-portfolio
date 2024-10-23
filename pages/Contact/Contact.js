@@ -43,7 +43,7 @@ const submit = () => {
     
     const response = await fetch('/.netlify/functions/send-email', {
       method: 'POST',
-      body: JSON.stringify({ email, message }),
+      body: JSON.stringify({ name, email, subject, message }),
     });
     
     if (response.ok) {

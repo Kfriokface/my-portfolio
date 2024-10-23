@@ -12,12 +12,12 @@ const transporter = nodemailer.createTransport({
 // Exporta la función handler que será ejecutada cuando la función Lambda sea llamada
 exports.handler = async (event, context) => {
   // Obtén los datos enviados desde el frontend
-  const { name, email, message } = JSON.parse(event.body);
+  const { name, email, subject, message } = JSON.parse(event.body);
 
   const mailOptions = {
-    from: process.env.VITE_GOOGLE_DOMAIN, // Tu cuenta de Gmail
-    to: email, // El destinatario del email (puedes ajustarlo a lo que necesites)
-    subject: `Nuevo mensaje de ${name}`,
+    from: email,
+    to: process.env.VITE_GOOGLE_DOMAIN,
+    subject: `Nuevo mensaje de ${name}: ${subject}`,
     text: message,
   };
 
