@@ -2,7 +2,6 @@ import "./Contact.css";
 import { cleanPage } from "../../utils/cleanPage";
 import Swal from 'sweetalert2';
 
-
 export const Contact = () => {
   const main = document.querySelector("main");
   cleanPage(main);
