@@ -7,7 +7,7 @@ export async function handler (event, context) {
     service: 'gmail',
     auth: {
       user: 'designalbertosancho@gmail.com',
-      pass: 'hhgd jdgw veyx uxjr',  // Usa una contraseña de aplicación de Gmail
+      pass: 'hhgd jdgw veyx uxjr',
     },
   });
 

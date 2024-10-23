@@ -10,7 +10,6 @@ export const Contact = () => {
     ${formulario}
   `;
 
-  sendEmail();
 }
 
 const introtext = `
@@ -22,7 +21,7 @@ const introtext = `
 `;
 
 const formulario = `
-  <form id="contactForm" class="contact-form">
+  <form id="contactForm" class="contact-form" onSubmit={sendEmail}>
     <input id="name" type="text" name="name" placeholder="Nombre completo" required>
     <input id="email" type="email" name="email" placeholder="Correo electrónico" required>
     <input id="subject" type="text" name="subject" placeholder="Asunto del mensaje" required>
