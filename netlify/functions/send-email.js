@@ -1,7 +1,7 @@
 import { createTransport } from 'nodemailer';
 
 export async function handler (event, context) {
-  const { email, message } = JSON.parse(event.body);
+  const { name, email, subject, message } = JSON.parse(event.body);
 
   let transporter = createTransport({
     service: 'gmail',
@@ -14,8 +14,8 @@ export async function handler (event, context) {
   const mailOptions = {
     from: email,
     to: 'designalbertosancho@gmail.com',
-    subject: 'Nuevo mensaje de contacto',
-    text: message,
+    subject: subject,
+    text: message + name,
   };
 
   try {
