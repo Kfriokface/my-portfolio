@@ -1,17 +1,14 @@
-const nodemailer = require('nodemailer');
+import { createTransport } from 'nodemailer';
 
-// Configura el transporter de Nodemailer con tu cuenta de Gmail
-const transporter = nodemailer.createTransport({
+const transporter = createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.VITE_GOOGLE_DOMAIN, // Usa las variables de entorno para ocultar tus credenciales
+    user: process.env.VITE_GOOGLE_DOMAIN,
     pass: process.env.VITE_GOOGLE_APPKEY,
   },
 });
 
-// Exporta la función handler que será ejecutada cuando la función Lambda sea llamada
-exports.handler = async (event, context) => {
-  // Obtén los datos enviados desde el frontend
+export async function handler(event) {
   const { name, email, subject, message } = JSON.parse(event.body);
 
   const mailOptions = {
@@ -22,7 +19,6 @@ exports.handler = async (event, context) => {
   };
 
   try {
-    // Envía el email
     await transporter.sendMail(mailOptions);
     return {
       statusCode: 200,
@@ -34,4 +30,4 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({ error: 'Error al enviar el correo', details: error.message }),
     };
   }
-};
+}

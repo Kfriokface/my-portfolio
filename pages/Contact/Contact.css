@@ -54,7 +54,6 @@ section.contact {
 .contact-form textarea::placeholder {
   color:var(--fondo);
   font-family: monospace;
-
 }
 
 .contact-form button {
