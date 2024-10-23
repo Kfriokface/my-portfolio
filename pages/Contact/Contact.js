@@ -1,5 +1,7 @@
 import "./Contact.css";
 import { cleanPage } from "../../utils/cleanPage";
+import Swal from 'sweetalert2';
+
 
 export const Contact = () => {
   const main = document.querySelector("main");
@@ -47,9 +49,14 @@ const submit = () => {
     });
     
     if (response.ok) {
-      console.log('Correo enviado exitosamente');
+      Swal.fire({
+        title: 'Error!',
+        text: 'Do you want to continue',
+        icon: 'error',
+        confirmButtonText: 'Cool'
+      })
     } else {
-      console.error('Error al enviar el correo');
+      alert('Error al enviar el correo');
     }
   });
 };
