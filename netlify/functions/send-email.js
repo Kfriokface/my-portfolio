@@ -1,20 +1,20 @@
 import { createTransport } from 'nodemailer';
 
 export async function handler (event, context) {
-  const { name, email, subject, message } = JSON.parse(event.body);
+  const { email, message } = JSON.parse(event.body);
 
   let transporter = createTransport({
     service: 'gmail',
     auth: {
-      user: 'designalbertosancho@gmail.com',
-      pass: 'hxjt ivem rtvz axhl',
+      user: import.meta.env.VITE_GOOGLE_DOMAIN,
+      pass: import.meta.env.VITE_GOOGLE_APPKEY,
     },
   });
 
   const mailOptions = {
     from: email,
-    to: 'designalbertosancho@gmail.com',
-    subject: subject,
+    to: import.meta.env.VITE_GOOGLE_DOMAIN,
+    subject: 'Nuevo mensaje de contacto',
     text: message,
   };
 
