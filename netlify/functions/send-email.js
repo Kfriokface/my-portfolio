@@ -6,14 +6,14 @@ export async function handler (event, context) {
   let transporter = createTransport({
     service: 'gmail',
     auth: {
-      user: import.meta.env.VITE_GOOGLE_DOMAIN,
-      pass: import.meta.env.VITE_GOOGLE_APPKEY,
+      user: 'designalbertosancho@gmail.com',
+      pass: 'hhgd jdgw veyx uxjr',  // Usa una contraseña de aplicación de Gmail
     },
   });
 
   const mailOptions = {
     from: email,
-    to: import.meta.env.VITE_GOOGLE_DOMAIN,
+    to: 'designalbertosancho@gmail.com',
     subject: 'Nuevo mensaje de contacto',
     text: message,
   };
