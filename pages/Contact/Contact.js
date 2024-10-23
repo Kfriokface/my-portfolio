@@ -49,13 +49,18 @@ const submit = () => {
     
     if (response.ok) {
       Swal.fire({
-        title: 'Error!',
-        text: 'Do you want to continue',
-        icon: 'error',
+        title: '¡Mensaje enviado!',
+        text: 'Gracias por contactar conmigo, te responderé lo antes posible',
+        icon: 'success',
         confirmButtonText: 'Cool'
       })
     } else {
-      alert('Error al enviar el correo');
+      Swal.fire({
+        title: '¡Ops!',
+        text: 'Algo ha ido mal y tu mensaje no ha podido mandarse. Por favor vuelve a intentarlo.',
+        icon: 'error',
+        confirmButtonText: 'Cerrar'
+      });
     }
   });
 };
