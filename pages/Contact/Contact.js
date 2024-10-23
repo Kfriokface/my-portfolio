@@ -9,8 +9,8 @@ export const Contact = () => {
     ${introtext}
     ${formulario}
   `;
-  
-  submit();
+
+  sendEmail();
 }
 
 const introtext = `
@@ -23,51 +23,30 @@ const introtext = `
 
 const formulario = `
   <form id="contactForm" class="contact-form">
-    <input id="name" type="text" name="nombre" placeholder="Nombre completo">
-    <input id="email" type="email" name="correo" placeholder="Correo electrónico">
-    <input id="subject" type="text" name="asunto" placeholder="Asunto del mensaje">
-    <textarea id="message" rows="4" placeholder="Escribe tu comentario aquí..."></textarea>
+    <input id="name" type="text" name="name" placeholder="Nombre completo" required>
+    <input id="email" type="email" name="email" placeholder="Correo electrónico" required>
+    <input id="subject" type="text" name="subject" placeholder="Asunto del mensaje" required>
+    <textarea id="message" name="message" rows="4" placeholder="Escribe tu comentario aquí..." required></textarea>
     <button type="submit">Enviar</button>
   </form>
 </section>  
 `;
 
-const submit = () => {
-  
-  document.querySelector('#contactForm').addEventListener('submit', async (event) => {
-    event.preventDefault();
+const sendEmail = async (e) => {
+  e.preventDefault();
+  const name = e.target.name.value;
+  const email = e.target.email.value;
+  const subject = e.target.subject.value;
+  const message = e.target.message.value;
 
-    // Obtener los valores de los campos
-    const name = document.querySelector('#name').value;
-    const email = document.querySelector('#email').value;
-    const subject = document.querySelector('#subject').value;
-    const message = document.querySelector('#message').value;
-
-    const body = {
-      name: name,
-      email: email,
-      subject: subject,
-      message: message,
-    };
-
-    try {
-      // Enviar los datos a la función de Netlify
-      const response = await fetch('/.netlify/functions/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(body),
-      });
-      if (response.ok) {
-        alert('Email sent successfully!');
-        form.reset();
-      } else {
-        alert('Failed to send email.');
-      }
-    } catch (error) {
-    console.error('Error sending email:', error);
-      alert('Error occurred while sending email.');
-    }
+  const response = await fetch('/.netlify/functions/send-email', {
+    method: 'POST',
+    body: JSON.stringify({ name, email, subject, message }),
   });
+
+  if (response.ok) {
+    console.log('Correo enviado exitosamente');
+  } else {
+    console.error('Error al enviar el correo');
+  }
 };

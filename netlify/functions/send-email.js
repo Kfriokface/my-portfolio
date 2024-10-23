@@ -1,30 +1,33 @@
-import mailgun from 'mailgun-js';
+import { createTransport } from 'nodemailer';
 
-export async function handler(event) {
+export async function handler (event, context) {
   const { email, message } = JSON.parse(event.body);
 
-  const mg = mailgun({
-    apiKey: process.env.VITE_MAILGUN_API_KEY,
-    domain: process.env.VITE_MAILGUN_DOMAIN
+  let transporter = createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'designalbertosancho@gmail.com',
+      pass: 'hxjt ivem rtvz axhl',
+    },
   });
 
-  const data = {
-    from: 'Excited User <contacto@daw.albertosancho.es>',
-    to: email,
-    subject: 'Hello from Mailgun',
-    text: message
+  const mailOptions = {
+    from: email,
+    to: 'designalbertosancho@gmail.com',
+    subject: 'Nuevo mensaje de contacto',
+    text: message,
   };
 
   try {
-    const body = await mg.messages().send(data);
+    await transporter.sendMail(mailOptions);
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: 'Email sent successfully', body })
+      body: JSON.stringify({ message: 'Correo enviado correctamente' }),
     };
   } catch (error) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ message: 'Failed to send email', error })
+      body: JSON.stringify({ error: 'Error al enviar el correo' }),
     };
   }
 }
