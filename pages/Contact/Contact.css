@@ -85,13 +85,10 @@ section.contact {
 }
 
 /* Light */
-
-
-
 body.light.contactPage::after {
   filter: initial;
 }
 
-.contact-text h1 span {
+body.light .contact-text h1 span {
   color: var(--fondo);
 }
