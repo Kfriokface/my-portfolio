@@ -42,12 +42,13 @@ const submit = () => {
     const subject = e.target.subject.value;
     const body = e.target.message.value;
     const message = `
-      <div>${name}</div>
-      <div>${email}</div>
-      <div>${subject}</div>
-      <div>${body}</div>
-    `
-    
+      Has recibido un nuevo contacto desde albertosancho.netlify.app con el siguiente contenido:
+      Nombre: ${name}
+      Email: ${email}
+      Asunto: ${subject}
+      Mansaje: ${body}
+    `;
+
     const response = await fetch('/.netlify/functions/send-email', {
       method: 'POST',
       body: JSON.stringify({ name, email, subject, message }),

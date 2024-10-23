@@ -9,12 +9,12 @@ const transporter = createTransport({
 });
 
 export async function handler(event) {
-  const { name, email, subject, message } = JSON.parse(event.body);
+  const { email, message } = JSON.parse(event.body);
 
   const mailOptions = {
     from: email,
     to: process.env.VITE_GOOGLE_DOMAIN,
-    subject: `Nuevo mensaje de ${name}: ${subject}`,
+    subject: `Nuevo mensaje desde albertosancho.netlify.app`,
     text: message,
   };
 
@@ -27,7 +27,10 @@ export async function handler(event) {
   } catch (error) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: 'Error al enviar el correo', details: error.message }),
+      body: JSON.stringify({
+        error: 'Error al enviar el correo',
+        details: error.message
+      }),
     };
   }
 }
