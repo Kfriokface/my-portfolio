@@ -15,7 +15,7 @@ export async function handler (event, context) {
     from: email,
     to: 'designalbertosancho@gmail.com',
     subject: subject,
-    text: message + name,
+    text: message,
   };
 
   try {
