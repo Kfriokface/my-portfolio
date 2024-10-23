@@ -13,25 +13,6 @@ export const Contact = () => {
   submit();
 }
 
-const submit = async (e) => {
-  e.preventDefault();
-  //const name = e.target.name.value;
-  const email = e.target.email.value;
- // const subject = e.target.subject.value;
-  const message = e.target.message.value;
-
-  const response = await fetch('/.netlify/functions/send-email', {
-    method: 'POST',
-    body: JSON.stringify({ email, message }),
-  });
-
-  if (response.ok) {
-    console.log('Correo enviado exitosamente');
-  } else {
-    console.error('Error al enviar el correo');
-  }
-};
-
 const introtext = `
 <section class="contact">
   <div class="contact-text">
@@ -51,4 +32,24 @@ const formulario = `
 </section>  
 `;
 
-
+const submit = () => {
+  document.querySelector('#contactForm').addEventListener('submit', async (e) => {
+    console.log(e);
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const subject = e.target.subject.value;
+    const message = e.target.message.value;
+    
+    const response = await fetch('/.netlify/functions/send-email', {
+      method: 'POST',
+      body: JSON.stringify({ email, message }),
+    });
+    
+    if (response.ok) {
+      console.log('Correo enviado exitosamente');
+    } else {
+      console.error('Error al enviar el correo');
+    }
+  });
+};
