@@ -1,6 +1,6 @@
 import { createTransport } from 'nodemailer';
 
-export async function handler (event, context) {
+export async function handler (event) {
   const { email, message } = JSON.parse(event.body);
 
   let transporter = createTransport({

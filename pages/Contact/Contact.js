@@ -9,7 +9,8 @@ export const Contact = () => {
     ${introtext}
     ${formulario}
   `;
-
+  
+  submit();
 }
 
 const introtext = `
@@ -21,7 +22,7 @@ const introtext = `
 `;
 
 const formulario = `
-  <form id="contactForm" class="contact-form" onSubmit={sendEmail}>
+  <form id="contactForm" class="contact-form">
     <input id="name" type="text" name="name" placeholder="Nombre completo" required>
     <input id="email" type="email" name="email" placeholder="Correo electrónico" required>
     <input id="subject" type="text" name="subject" placeholder="Asunto del mensaje" required>
@@ -31,16 +32,16 @@ const formulario = `
 </section>  
 `;
 
-const sendEmail = async (e) => {
+const submit = async (e) => {
   e.preventDefault();
-  const name = e.target.name.value;
+  //const name = e.target.name.value;
   const email = e.target.email.value;
-  const subject = e.target.subject.value;
+ // const subject = e.target.subject.value;
   const message = e.target.message.value;
 
   const response = await fetch('/.netlify/functions/send-email', {
     method: 'POST',
-    body: JSON.stringify({ name, email, subject, message }),
+    body: JSON.stringify({ email, message }),
   });
 
   if (response.ok) {
