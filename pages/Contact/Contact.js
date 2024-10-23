@@ -40,7 +40,13 @@ const submit = () => {
     const name = e.target.name.value;
     const email = e.target.email.value;
     const subject = e.target.subject.value;
-    const message = e.target.message.value;
+    const body = e.target.message.value;
+    const message = `
+      <div>${name}</div>
+      <div>${email}</div>
+      <div>${subject}</div>
+      <div>${body}</div>
+    `
     
     const response = await fetch('/.netlify/functions/send-email', {
       method: 'POST',
