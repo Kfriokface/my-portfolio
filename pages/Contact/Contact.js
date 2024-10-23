@@ -10,7 +10,7 @@ export const Contact = () => {
     ${formulario}
   `;
   
-  //submit();
+  submit();
 }
 
 const submit = async (e) => {
@@ -41,7 +41,7 @@ const introtext = `
 `;
 
 const formulario = `
-  <form id="contactForm" class="contact-form" onSubmit=${submit}>
+  <form id="contactForm" class="contact-form">
     <input id="name" type="text" name="name" placeholder="Nombre completo" required>
     <input id="email" type="email" name="email" placeholder="Correo electrónico" required>
     <input id="subject" type="text" name="subject" placeholder="Asunto del mensaje" required>
