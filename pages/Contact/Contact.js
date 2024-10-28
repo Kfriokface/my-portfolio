@@ -85,15 +85,12 @@ const submit = () => {
   });
 };
 
-
 function cookieExists(name) {
-  // Create a regular expression to check for the cookie
   const cookies = document.cookie.split(';');
   for (let cookie of cookies) {
-      // Trim whitespace and check if the cookie name matches
-      if (cookie.trim().startsWith(name + '=')) {
-          return true; // Cookie exists
-      }
+    if (cookie.trim().startsWith(name + '=')) {
+        return true;
+    }
   }
   return false;
 }
