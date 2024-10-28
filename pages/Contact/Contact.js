@@ -41,8 +41,8 @@ const submit = () => {
     if (cookieExists('email_sent')) {
       console.log('La cookie "nombre" existe.');
       Swal.fire({
-        title: '¡Ops!',
-        text: 'Algo ha ido mal y tu mensaje no ha podido mandarse. Por favor vuelve a intentarlo.',
+        title: '¡Vaya!',
+        text: 'Parece que ya has enviado un correo anteriormente. Si quieres mandarme otro correo, por favor vuelve a intentarlo más tarde. Gracias.',
         icon: 'error',
         confirmButtonText: 'Cerrar'
       });
@@ -73,7 +73,7 @@ const submit = () => {
         icon: 'success',
         confirmButtonText: 'Cool'
       }),
-      document.cookie = `nombre='email_sent'; path=/;`;
+      document.cookie = `email_sent=true; path=/;`;
     } else {
       Swal.fire({
         title: '¡Ops!',
