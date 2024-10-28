@@ -25,36 +25,15 @@ export async function handler(event) {
     text: `Este es tu mensaje: \n\n${message}\n\nMe pondré en contacto contigo lo antes posible. Gracias.`
   };
 
-  // try {
-  //   await transporter.sendMail(mailOptions);
-  //   return {
-  //     statusCode: 200,
-  //     headers: {
-  //       "Content-Type": "application/json"
-  //     },
-  //     body: JSON.stringify({ message: 'Correo enviado correctamente' }),
-  //   };
-  // } catch (error) {
-  //   return {
-  //     statusCode: 500,
-  //     body: JSON.stringify({
-  //       error: 'Error al enviar el correo',
-  //       details: error.message
-  //     }),
-  //   };
-  // }
   try {
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        return res.status(500).send(error.toString());
-      }
-      transporter.sendMail(mailOptionsCopy, (error, info) => {
-        if (error) {
-          return res.status(500).send(error.toString());
-        }
-        res.status(200).send("Correo enviado correctamente.");
-      });
-    });
+    await transporter.sendMail(mailOptions).transporter.sendMail(mailOptionsCopy);
+    return {
+      statusCode: 200,
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ message: 'Correo enviado correctamente' }),
+    };
   } catch (error) {
     return {
       statusCode: 500,
