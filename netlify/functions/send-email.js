@@ -18,15 +18,15 @@ export async function handler(event) {
     text: message
   };
 
-  const mailOptionsCopy = {
-    from: process.env.VITE_GOOGLE_DOMAIN,
-    to: email,
-    subject: "Copia de tu mensaje enviado a Alberto Sancho",
-    text: `Este es tu mensaje: \n\n${message}\n\nMe pondré en contacto contigo lo antes posible. Gracias.`
-  };
+  // const mailOptionsCopy = {
+  //   from: process.env.VITE_GOOGLE_DOMAIN,
+  //   to: email,
+  //   subject: "Copia de tu mensaje enviado a Alberto Sancho",
+  //   text: `Este es tu mensaje: \n\n${message}\n\nMe pondré en contacto contigo lo antes posible. Gracias.`
+  // };
 
   try {
-    await transporter.sendMail(mailOptions).transporter.sendMail(mailOptionsCopy);
+    await transporter.sendMail(mailOptions);
     return {
       statusCode: 200,
       headers: {
