@@ -61,6 +61,7 @@ const submit = () => {
         icon: 'success',
         confirmButtonText: 'Cool'
       })
+      document.cookie = `nombre='email_sent'; path=/;`;
     } else {
       Swal.fire({
         title: '¡Ops!',
