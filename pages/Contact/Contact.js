@@ -60,7 +60,7 @@ const submit = () => {
         text: 'Gracias por contactar conmigo, te responderé lo antes posible',
         icon: 'success',
         confirmButtonText: 'Cool'
-      })
+      }),
       document.cookie = `nombre='email_sent'; path=/;`;
     } else {
       Swal.fire({
