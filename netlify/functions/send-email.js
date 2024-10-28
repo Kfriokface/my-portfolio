@@ -12,25 +12,48 @@ export async function handler(event) {
   const { email, message } = JSON.parse(event.body);
 
   const mailOptions = {
+    from: email,
+    to: process.env.VITE_GOOGLE_DOMAIN,
+    subject: "Mensaje enviado desde la web Alberto Sancho",
+    text: message
+  };
+
+  const mailOptionsCopy = {
     from: process.env.VITE_GOOGLE_DOMAIN,
     to: email,
     subject: "Copia de tu mensaje enviado a Alberto Sancho",
     text: `Este es tu mensaje: \n\n${message}\n\nMe pondré en contacto contigo lo antes posible. Gracias.`
   };
 
-  try {
-    await transporter.sendMail(mailOptions);
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ message: 'Correo enviado correctamente' }),
-    };
-  } catch (error) {
-    return {
-      statusCode: 500,
-      body: JSON.stringify({
-        error: 'Error al enviar el correo',
-        details: error.message
-      }),
-    };
-  }
+  // try {
+  //   await transporter.sendMail(mailOptions);
+  //   return {
+  //     statusCode: 200,
+  //     headers: {
+  //       "Content-Type": "application/json"
+  //     },
+  //     body: JSON.stringify({ message: 'Correo enviado correctamente' }),
+  //   };
+  // } catch (error) {
+  //   return {
+  //     statusCode: 500,
+  //     body: JSON.stringify({
+  //       error: 'Error al enviar el correo',
+  //       details: error.message
+  //     }),
+  //   };
+  // }
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+        return res.status(500).send(error.toString());
+    }
+    transporter.sendMail(mailOptionsCopy, (error, info) => {
+        if (error) {
+            return res.status(500).send(error.toString());
+        }
+        res.status(200).send("Correo enviado correctamente.");
+    });
+  });
+  
 }
