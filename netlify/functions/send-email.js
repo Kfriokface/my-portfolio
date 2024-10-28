@@ -9,13 +9,13 @@ const transporter = createTransport({
 });
 
 export async function handler(event) {
-  const { email, subject, message } = JSON.parse(event.body);
+  const { email, message } = JSON.parse(event.body);
 
   const mailOptions = {
     from: process.env.VITE_GOOGLE_DOMAIN,
     to: email,
     subject: "Copia de tu mensaje enviado a Alberto Sancho",
-    text: `Este es tu mensaje: \n${subject}\n${message}\n\nMe pondré en contacto contigo lo antes posible. Gracias.`
+    text: `Este es tu mensaje: \n\n${message}\n\nMe pondré en contacto contigo lo antes posible. Gracias.`
   };
 
   try {
