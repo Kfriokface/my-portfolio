@@ -43,17 +43,25 @@ export async function handler(event) {
   //     }),
   //   };
   // }
-
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
+  try {
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
         return res.status(500).send(error.toString());
-    }
-    transporter.sendMail(mailOptionsCopy, (error, info) => {
+      }
+      transporter.sendMail(mailOptionsCopy, (error, info) => {
         if (error) {
-            return res.status(500).send(error.toString());
+          return res.status(500).send(error.toString());
         }
         res.status(200).send("Correo enviado correctamente.");
+      });
     });
-  });
-  
+  } catch (error) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({
+        error: 'Error al enviar el correo',
+        details: error.message
+      }),
+    };
+  }
 }
