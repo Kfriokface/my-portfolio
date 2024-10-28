@@ -37,6 +37,18 @@ const submit = () => {
   document.querySelector('#contactForm').addEventListener('submit', async (e) => {
     console.log(e);
     e.preventDefault();
+
+    if (cookieExists('email_sent')) {
+      console.log('La cookie "nombre" existe.');
+      Swal.fire({
+        title: '¡Ops!',
+        text: 'Algo ha ido mal y tu mensaje no ha podido mandarse. Por favor vuelve a intentarlo.',
+        icon: 'error',
+        confirmButtonText: 'Cerrar'
+      });
+      return;
+    }
+
     const name = e.target.name.value;
     const email = e.target.email.value;
     const subject = e.target.subject.value;
@@ -72,3 +84,16 @@ const submit = () => {
     }
   });
 };
+
+
+function cookieExists(name) {
+  // Create a regular expression to check for the cookie
+  const cookies = document.cookie.split(';');
+  for (let cookie of cookies) {
+      // Trim whitespace and check if the cookie name matches
+      if (cookie.trim().startsWith(name + '=')) {
+          return true; // Cookie exists
+      }
+  }
+  return false;
+}
