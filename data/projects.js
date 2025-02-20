@@ -54,7 +54,7 @@ export const projects = [
     link: "https://vanesafernandez.es/",
   },
   {
-    title: "BodyEvolution",
+    title: "BodyEvolution (en desarrollo)",
     description: "Proyecto para la clínica de fisiorerapia Body Evolution",
     image:
       "/images/webs/body_evolution.png",
