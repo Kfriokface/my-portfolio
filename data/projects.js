@@ -63,6 +63,15 @@ export const projects = [
     link: "https://bepilates.albertosancho.es/",
   },
   {
+    title: "FotomaTown",
+    description: "Proyecto basado en APIrest de Unsplash",
+    image:
+      "/images/webs/fotomatown.jpg",
+    tech: ["Vite, PureJS"],
+    github: "",
+    link: "https://fotomatown.netlify.app",
+  },
+  {
     title: "AllFresco",
     description: "Proyecto para una tienda online de vegetales",
     image:
