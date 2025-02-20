@@ -1,7 +1,7 @@
 import "./Home.css";
 import { cleanPage } from "../../utils/cleanPage";
 import { experienceHeader, experienceTabs, experienceNav, experienceContent } from "../../components/Experience/Experience";
-import photoAs from "/images/alberto_sancho__v2n.jpg"
+import photoAs from "/images/alberto_sancho__v2.jpg"
 import { Skills } from "../../components/Skills/Skills";
 import Glide from '@glidejs/glide';
 

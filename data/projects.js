@@ -64,7 +64,7 @@ export const projects = [
   },
   {
     title: "FotomaTown",
-    description: "Proyecto basado en APIrest de Unsplash",
+    description: "Proyecto basado en la API de Unsplash",
     image:
       "/images/webs/fotomatown.jpg",
     tech: ["Vite, PureJS"],
