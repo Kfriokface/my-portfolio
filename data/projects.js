@@ -54,13 +54,13 @@ export const projects = [
     link: "https://vanesafernandez.es/",
   },
   {
-    title: "BodyEvolution (en desarrollo)",
+    title: "Body Evolution Salud Integral",
     description: "Proyecto para la clínica de fisiorerapia Body Evolution",
     image:
       "/images/webs/body_evolution.png",
     tech: ["Wordpress"],
     github: "",
-    link: "https://bepilates.albertosancho.es/",
+    link: "https://www.bodyevolutionsaludintegral.es/",
   },
   {
     title: "FotomaTown",
